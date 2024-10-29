@@ -3,6 +3,7 @@ import { AuthService } from '../../../auth/services/auth.service';
 import { dashboardService } from '../../services/dashboard.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { ListChollos } from '../../interfaces/list-chollo.interface';
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -24,6 +25,7 @@ export class DashboardLayoutComponent {
     this.userId = this.authService.getUserId(); // Obtener ID del usuario autenticado desde el servicio de autenticación
     console.log('ID de usuario logueado: ', this.userId);
     this.getListUserChollos(this.userId); // Cargar chollos del usuario
+
   }
 
   // Método para obtener los chollos del usuario
@@ -74,9 +76,5 @@ export class DashboardLayoutComponent {
     });
   }
 
-  // Cerrar sesión
-  onLogout() {
-    this.authService.logout();
-  }
 }
 

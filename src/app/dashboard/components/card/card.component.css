@@ -1,0 +1,122 @@
+/* Estilo general de la tarjeta */
+.chollo-card {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  width: 70%; /* Ocupa el 70% del ancho de la pantalla */
+  max-width: 600px; /* Limita el ancho máximo */
+  margin: 20px 0; /* Espaciado vertical entre tarjetas */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para darle estilo */
+  border-radius: 8px;
+  overflow: hidden; /* Evita desbordamientos */
+  background-color: white; /* Fondo blanco */
+}
+
+/* Contenedor del contenido de la tarjeta */
+.card-content {
+  display: flex; /* Usa flexbox para la disposición */
+  padding: 16px;
+}
+
+/* Contenedor de la imagen principal */
+.image-container {
+  position: relative; /* Necesario para que los botones se posicionen correctamente */
+  width: 150px; /* Ancho fijo para la imagen */
+  height: 150px; /* Altura fija para uniformidad */
+  overflow: hidden; /* Evita desbordamientos de la imagen */
+  border-radius: 8px;
+}
+
+/* Título y precio alineados */
+.card-title-price {
+  display: flex; /* Usamos flexbox para la disposición */
+  justify-content: space-between; /* Distribuye el espacio entre el título y el precio */
+  align-items: center; /* Alinea verticalmente los elementos */
+  width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
+  margin: 10px 0; /* Margen entre el título y el precio */
+}
+
+
+/* Estilo para la imagen del chollo */
+.chollo-image {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 100%; /* Ajuste para ocupar la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen para que llene el contenedor sin distorsión */
+}
+
+/* Contenedor de los detalles de la tarjeta */
+.card-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Ocupa el espacio restante */
+  margin-left: 16px; /* Espacio a la izquierda para separación */
+}
+
+/* Estilos de la descripción */
+.chollo-description {
+  margin: 10px 0; /* Espacio entre la descripción y el botón */
+}
+
+/* Contenedor del botón, ahora se posiciona a la derecha */
+.button-container {
+  display: flex; /* Usamos flexbox para facilitar la alineación */
+  justify-content: flex-end; /* Alinea el botón a la derecha */
+  margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+/* Estilos del botón */
+.btn.ir-al-chollo {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 8px 12px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Efecto hover del botón */
+.btn.ir-al-chollo:hover {
+  background-color: #45a049; /* Color en hover */
+}
+
+/* Estilo para el botón de navegación dentro de la imagen */
+.nav-button {
+  position: absolute; /* Asegura que el botón se posicione sobre la imagen */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%); /* Centra el botón verticalmente */
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 18px; /* Tamaño de fuente */
+  padding: 5px; /* Espaciado interno */
+  border-radius: 50%; /* Forma circular */
+  z-index: 10; /* Asegura que esté por encima de la imagen */
+  transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Color de fondo al pasar el mouse */
+}
+
+/* Posicionamiento específico para el botón de siguiente */
+.right {
+  right: 1px; /* Posición a 10px desde el lado derecho */
+}
+
+/* Posicionamiento específico para el botón de anterior */
+.left {
+  left: 1px; /* Posición a 10px desde el lado izquierdo */
+}
+
+/* Deshabilitar el botón cuando no es clickeable */
+.nav-button[disabled] {
+  background-color: rgba(255, 255, 255, 0.3); /* Fondo gris al deshabilitar */
+  cursor: not-allowed; /* Cambia el cursor al pasar sobre el botón deshabilitado */
+}
+
+/* Responsividad: en pantallas grandes las tarjetas serán más anchas */
+@media (min-width: 768px) {
+  .chollo-card {
+    max-width: 70%; /* El ancho máximo sigue siendo 70% de la pantalla */
+  }
+}

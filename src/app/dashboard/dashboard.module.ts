@@ -8,6 +8,7 @@ import { UpdateCholloComponent } from './pages/update-chollo/update-chollo.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { MaterialModule } from '../material/material.module';
     DashboardLayoutComponent,
     CreateCholloComponent,
     UpdateCholloComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,

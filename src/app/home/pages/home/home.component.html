@@ -16,6 +16,9 @@
   <h1>Listado de Chollos</h1>
   <mat-divider></mat-divider>
 
+  <!-- Usamos ngClass para alternar clases
+  <div [ngClass]="searchTitle ? 'grid2' : 'grid'"> -->
+
   <div class="grid">
 
       <div *ngFor="let chollo of chollos"

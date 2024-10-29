@@ -1,0 +1,24 @@
+<mat-card class="chollo-card">
+  <div class="card-content">
+    <div class="image-container">
+      <!-- Imagen principal -->
+      <img [src]="images[currentImageIndex]" alt="Imagen de {{ chollo.titulo }}" class="chollo-image" />
+
+      <!-- Botones de navegación -->
+      <button (click)="prevImage()" class="nav-button left" [disabled]="currentImageIndex === 0">❮</button>
+      <button (click)="nextImage()" class="nav-button right" [disabled]="currentImageIndex === images.length - 1">❯</button>
+    </div>
+    <div class="card-details">
+      <div class="card-title-price">
+        <strong>{{ chollo.titulo }}</strong>
+        <span>{{ chollo.precio }}€</span>
+      </div>
+      <p class="chollo-description">{{ chollo.descripcion }}</p>
+
+      <!-- Contenedor del botón -->
+      <div class="button-container">
+        <a [href]="chollo.enlace" target="_blank" class="btn ir-al-chollo">Ir al chollo</a>
+      </div>
+    </div>
+  </div>
+</mat-card>
