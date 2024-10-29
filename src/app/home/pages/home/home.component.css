@@ -1,0 +1,8 @@
+/* Contenedor principal para centrar todas las tarjetas */
+.cards-wrapper {
+  display: flex;
+  flex-direction: column; /* Coloca una card por fila */
+  align-items: center; /* Centra las tarjetas horizontalmente */
+  width: 100%;
+  padding: 20px 0; /* Espaciado superior e inferior */
+}

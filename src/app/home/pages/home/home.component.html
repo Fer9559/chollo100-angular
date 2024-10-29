@@ -4,12 +4,32 @@
   </button>
 </div>-->
 
+<div class="container p-10">
+  <div>
+    <input [(ngModel)]="searchTitle" type="text" placeholder="Buscar chollo por título" />
+    <button (click)="searchChollo()">Buscar</button>
+  </div>
+  <p></p>
 
-<button (click)="onLogout()">Cerrar sesión</button>
+  <div class="cards-wrapper"></div>
 
-<hr>
+  <h1>Listado de Chollos</h1>
+  <mat-divider></mat-divider>
+
+  <div class="grid bm-8 p-2">
+
+      <div *ngFor="let chollo of chollos"
+        class="col-12 sm:col-12 md:col-12 xl:col-12">
+          <chollos-chollo-card [chollo]="chollo"></chollos-chollo-card>
+      </div>
+    </div>
+  </div>
+
+
+
 
 <!-- Input para el buscador de chollos por título -->
+ <!--
 <div>
   <input [(ngModel)]="searchTitle" type="text" placeholder="Buscar chollo por título" />
   <button (click)="searchChollo()">Buscar</button>
@@ -33,3 +53,4 @@
 <ng-template #noChollos>
   <p>No hay chollos disponibles para este usuario.</p>
 </ng-template>
+-->

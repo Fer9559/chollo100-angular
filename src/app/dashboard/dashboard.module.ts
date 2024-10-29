@@ -7,6 +7,7 @@ import { CreateCholloComponent } from './pages/create-chollo/create-chollo.compo
 import { UpdateCholloComponent } from './pages/update-chollo/update-chollo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
     DashboardRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ]
 })
 export class DashboardModule { }

@@ -8,6 +8,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { authInterceptor } from './auth/services/auth.interceptor';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { MaterialModule } from './material/material.module';
 
 
 
@@ -23,6 +24,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MaterialModule
   ],
   providers: [
     provideHttpClient(
