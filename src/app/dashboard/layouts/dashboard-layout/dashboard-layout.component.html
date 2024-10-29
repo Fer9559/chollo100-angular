@@ -1,14 +1,6 @@
 
-<h1>Dashboard</h1>
-<hr>
 
-<p><a routerLink="/dashboard/create" class="txt2"> Crear chollo </a></p>
-
-
-<hr>
-
-
-
+<div *ngIf="chollos.length > 0; else noChollos">
   <!-- Usamos ngClass para alternar clases
   <div [ngClass]="searchTitle ? 'grid2' : 'grid'"> -->
 
@@ -16,8 +8,13 @@
 
       <div class="cards-wrapper"></div>
 
-      <h1>Listado de Chollos</h1>
+      <h1>Mis Chollos</h1>
       <mat-divider></mat-divider>
+      <br>
+      <!-- Contenedor del botón crear -->
+      <div class="button-container-create">
+        <p><a routerLink="/dashboard/create" class="btn crear">+ Crear nuevo chollo </a></p>
+      </div>
 
       <!-- Usamos ngClass para alternar clases
       <div [ngClass]="searchTitle ? 'grid2' : 'grid'"> -->
@@ -30,9 +27,10 @@
           </div>
         </div>
       </div>
+    </div>
 
-<!--
-<div *ngIf="chollos.length > 0; else noChollos">
+
+  <!--
   <h2>Chollos de Usuario</h2>
   <ul>
     <li *ngFor="let chollo of chollos">
@@ -54,9 +52,9 @@
     </li>
   </ul>
 </div>
-
+-->
 <ng-template #noChollos>
   <p>No hay chollos disponibles para este usuario.</p>
 </ng-template>
 
--->
+

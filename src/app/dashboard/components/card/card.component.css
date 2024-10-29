@@ -47,8 +47,9 @@
 .card-details {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Ocupa el espacio restante */
-  margin-left: 16px; /* Espacio a la izquierda para separación */
+  flex: 1;
+  margin-left: 16px;
+  justify-content: space-between; /* Espacio entre contenido superior e inferior */
 }
 
 /* Estilos de la descripción */
@@ -56,11 +57,25 @@
   margin: 10px 0; /* Espacio entre la descripción y el botón */
 }
 
-/* Contenedor del botón, ahora se posiciona a la derecha */
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Distribuye los botones en la fila */
+  align-items: center; /* Centra verticalmente */
+  margin-top: auto; /* Empuja los botones a la parte baja */
+}
+
+/* Ajustes en los contenedores de los botones */
+.button-container-edit,
+.button-container-delete,
 .button-container {
-  display: flex; /* Usamos flexbox para facilitar la alineación */
-  justify-content: flex-end; /* Alinea el botón a la derecha */
-  margin-top: auto; /* Empuja el botón hacia abajo */
+  flex: 1; /* Cada contenedor toma el mismo espacio */
+}
+
+/* Contenedor del botón principal, alineado a la derecha y abajo */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+
 }
 
 /* Estilos del botón */
@@ -77,6 +92,52 @@
 /* Efecto hover del botón */
 .btn.ir-al-chollo:hover {
   background-color: #45a049; /* Color en hover */
+}
+
+/* Contenedor del botón de edición, alineado a la izquierda y abajo */
+.button-container-edit {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+/* Estilos del botón */
+.btn.editar {
+  background-color: #de7900; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 8px 12px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Efecto hover del botón */
+.btn.editar:hover {
+  background-color: #bc6600; /* Color en hover */
+}
+
+/* Contenedor del botón de eliminar, centrado y alineado en la parte baja */
+.button-container-delete {
+  display: flex;
+  justify-content: center;
+
+}
+
+/* Estilos del botón */
+.btn.btn-danger {
+  background-color: #c60000; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 8px 12px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Efecto hover del botón */
+.btn.btn-danger:hover {
+  background-color: #b20000; /* Color en hover */
 }
 
 /* Estilo para el botón de navegación dentro de la imagen */

@@ -15,10 +15,20 @@
       </div>
       <p class="chollo-description">{{ chollo.descripcion }}</p>
 
-      <!-- Contenedor del botón -->
-      <div class="button-container">
-        <a [href]="chollo.enlace" target="_blank" class="btn ir-al-chollo">Ir al chollo</a>
+      <!-- Nuevo contenedor para los botones alineados -->
+      <div class="button-group">
+        <div class="button-container-edit">
+          <a (click)="onUpdateChollo(chollo.id_chollo)" class="btn editar">Editar</a>
+        </div>
+        <div class="button-container-delete">
+          <a (click)="onDeleteChollo(chollo.id_chollo)" class="btn btn-danger">Eliminar</a>
+        </div>
+        <div class="button-container">
+          <a [href]="chollo.enlace" target="_blank" class="btn ir-al-chollo">Ir al chollo</a>
+        </div>
       </div>
+
     </div>
   </div>
 </mat-card>
+

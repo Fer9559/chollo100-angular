@@ -19,3 +19,27 @@
     margin-left: 15%;
 }
 
+/* Contenedor del botón de edición, alineado a la izquierda y abajo */
+.button-container-create {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto; /* Asegura que se posicione en la parte baja */
+  align-self: flex-end; /* Alinea a la izquierda */
+  margin-right: 30%;
+}
+
+/* Estilos del botón */
+.btn.crear {
+  background-color: #0015e8; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 8px 12px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Efecto hover del botón */
+.btn.crear:hover {
+  background-color: #0213bd; /* Color en hover */
+}
