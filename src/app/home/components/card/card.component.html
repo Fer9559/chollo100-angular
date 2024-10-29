@@ -11,13 +11,14 @@
     <div class="card-details">
       <div class="card-title-price">
         <strong>{{ chollo.titulo }}</strong>
-         {{ chollo.precio }}€
+        <span>{{ chollo.precio }}€</span>
       </div>
       <p class="chollo-description">{{ chollo.descripcion }}</p>
-      <a [href]="chollo.enlace" target="_blank" class="btn ir-al-chollo">
-        Ir al chollo
-      </a>
+
+      <!-- Contenedor del botón -->
+      <div class="button-container">
+        <a [href]="chollo.enlace" target="_blank" class="btn ir-al-chollo">Ir al chollo</a>
+      </div>
     </div>
   </div>
 </mat-card>
-
