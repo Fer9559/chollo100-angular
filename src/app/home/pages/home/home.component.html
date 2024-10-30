@@ -6,8 +6,8 @@
 
 <div class="container p-10">
   <div>
-    <input [(ngModel)]="searchTitle" type="text" placeholder="Buscar chollo por título" />
-    <button (click)="searchChollo()">Buscar</button>
+    <input [formControl]="searchChollos" type="text" placeholder="Buscar chollo por título" />
+    <button (click)="cleanSearch()">Limpiar busqueda</button>
   </div>
   <p></p>
 

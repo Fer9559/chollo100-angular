@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../auth/services/auth.service';
 import { HomeServiceService } from '../../services/homeService.service';
 import { AuthStatus } from '../../../auth/interfaces/auth-status.enum';
+import { FormControl } from '@angular/forms';
+import { debounceTime, filter, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -18,10 +20,30 @@ export class HomeComponent {
   private router = inject(Router);
 
   chollos: any[] = []; // Array para almacenar los chollos
-  searchTitle: string = ''; // Título a buscar
+  searchChollos = new FormControl(''); // FormControl para manejar la entrada de búsqueda
 
   ngOnInit(): void {
     this.getAllChollos(); // Cargar todos los chollos al iniciar
+
+     // Suscripción a los cambios en el FormControl searchChollos
+    this.searchChollos.valueChanges.pipe(
+      filter((titulo): titulo is string => titulo !== null),
+      debounceTime(100),
+      filter((titulo: string) => titulo.length >= 3),
+      switchMap(titulo => this.homeService.getCholloByTitle(titulo))
+    ).subscribe({
+      next: (chollos) => {
+        this.chollos = chollos; // Muestra solo el chollo encontrado
+      },
+      error: (error) => {
+        console.error('Error al buscar el chollo:', error);
+      }
+    });
+  }
+
+  cleanSearch(){
+    this.searchChollos.setValue(''); // Vaciar el input de búsqueda
+    this.getAllChollos();
   }
 
   // Método para obtener todos los chollos
@@ -40,8 +62,10 @@ export class HomeComponent {
     });
   }
 
+
+
   // Método para buscar un chollo por título
-  searchChollo(): void {
+  /*searchChollo(): void {
     console.log('metodo searchChollo.');
     if (this.searchTitle.trim() === '') {
       console.log('titulo vacio');
@@ -59,7 +83,11 @@ export class HomeComponent {
         }
       });
 
-  }
+  }*/
+
+
+
+
 
   // Navega a la página de autenticación
   login() {

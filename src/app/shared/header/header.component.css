@@ -3,7 +3,7 @@
   justify-content: center; /* Centra el contenido del header */
   align-items: center;
   padding: 20px 20px; /* Aumenta el padding para dar más altura */
-  background-color: #f5f5f5;
+  background-color: #e14949;
   position: relative;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .logout-button {
-  background-color: #dc3545;
+  background-color: #a91212;
 }
 
 .auth-button:hover {
@@ -52,5 +52,5 @@
 }
 
 .logout-button:hover {
-  background-color: #c82333;
+  background-color: #7c1313;
 }
