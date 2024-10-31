@@ -58,13 +58,18 @@
   width: 100%;                 /* Ancho completo */
   padding: 20px;               /* Espaciado interno */
   background-color: #f5f5f5;   /* Color de fondo gris claro */
+  min-height: calc(100vh - 60px); /* Asegura que el fondo cubra la altura total menos el footer */
+  box-sizing: border-box;      /* Incluye el padding en el cálculo del ancho y alto */
 }
 
 /* Ajusta el margen izquierdo del grid para un mejor alineado */
 .grid {
-  margin-left: 20%;            /* Margen a la izquierda del grid para desplazarlo */
+  display: flex;
+  flex-wrap: wrap; /* Para permitir múltiples columnas si es necesario */
+  justify-content: center; /* Centra el contenido */
+  margin-left: 0; /* Restablece margen izquierdo para centrado global */
+  width: 100%; /* Asegura que el grid ocupe todo el ancho */
 }
-
 /* Estilo simplificado para el encabezado principal */
 .page-title {
   font-size: 28px;                   /* Tamaño grande para destacar */
@@ -74,6 +79,5 @@
   text-align: center;                /* Centra el texto */
   margin: 20px 0;                    /* Espaciado superior e inferior */
 }
-
 
 

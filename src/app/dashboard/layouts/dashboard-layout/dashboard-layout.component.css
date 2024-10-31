@@ -15,8 +15,13 @@
   padding: 20px 0;
 }
 
-.grid{
-    margin-left: 20%;
+/* Ajusta el margen izquierdo del grid para un mejor alineado */
+.grid {
+  display: flex;
+  flex-wrap: wrap; /* Para permitir múltiples columnas si es necesario */
+  justify-content: center; /* Centra el contenido */
+  margin-left: 0; /* Restablece margen izquierdo para centrado global */
+  width: 100%; /* Asegura que el grid ocupe todo el ancho */
 }
 
 /* Contenedor del botón de edición, alineado a la izquierda y abajo */

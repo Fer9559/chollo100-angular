@@ -2,9 +2,10 @@
 .chollo-card {
   display: flex;
   flex-direction: column; /* Coloca los elementos en columna */
-  width: 70%; /* Ocupa el 70% del ancho de la pantalla */
+  width: 100%; /* Establece ancho completo en contenedores flexibles */
   max-width: 600px; /* Limita el ancho máximo */
-  margin: 20px 0; /* Espaciado vertical entre tarjetas */
+  min-width: 400px; /* Establece un ancho mínimo */
+  margin: 20px auto; /* Centra la card y espaciado vertical */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para darle estilo */
   border-radius: 8px;
   overflow: hidden; /* Evita desbordamientos */
@@ -33,6 +34,7 @@
   align-items: center; /* Alinea verticalmente los elementos */
   width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
   margin: 10px 0; /* Margen entre el título y el precio */
+  font-size: 18px;
 }
 
 
@@ -47,13 +49,18 @@
 .card-details {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Ocupa el espacio restante */
-  margin-left: 16px; /* Espacio a la izquierda para separación */
+  flex: 1;
+  margin-left: 16px;
+  justify-content: space-between; /* Espacio entre contenido superior e inferior */
+  min-height: 200px; /* Añade una altura mínima para evitar colapsos */
 }
 
 /* Estilos de la descripción */
+/* Estilos de la descripción para forzar el tamaño */
 .chollo-description {
-  margin: 10px 0; /* Espacio entre la descripción y el botón */
+  margin: 10px 0;
+  flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
+  text-align: justify; /* Justifica el texto */
 }
 
 /* Contenedor del botón, ahora se posiciona a la derecha */
