@@ -20,9 +20,10 @@
 }
 
 .header-text {
-  font-size: 26px; /* Tamaño de fuente más grande */
-  font-weight: bold;
-  color: #333;
+  font-size: 26px; /* Aumenta el tamaño de la fuente para mayor visibilidad */
+  font-weight: bold; /* Aplica negrita, resaltando el texto */
+  color: #ffffff; /* Establece el color del texto en blanco para contraste */
+  font-family: 'Times New Roman', serif; /* Usa la fuente 'Times New Roman', con respaldo serif */
 }
 
 .auth-buttons {

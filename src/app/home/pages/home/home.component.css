@@ -1,22 +1,77 @@
-/* Contenedor principal para centrar todas las tarjetas */
+/* Contenedor de búsqueda, alinea el input y el botón en una fila y agrega espacio entre ellos */
+.search-container {
+  display: flex;               /* Alinea el campo de búsqueda y el botón en una fila */
+  align-items: center;         /* Centra verticalmente los elementos dentro del contenedor */
+  gap: 10px;                   /* Espacio entre el input y el botón */
+  margin: 20px 0;              /* Margen superior e inferior para separar el contenedor de otros elementos */
+}
+
+/* Estilos del campo de entrada (input) para el buscador */
+.search-input {
+  width: 250px;                /* Ancho del input */
+  padding: 10px 15px;          /* Espacio interno para el texto */
+  font-size: 16px;             /* Tamaño de la fuente dentro del input */
+  border: 1px solid #ddd;      /* Borde gris claro */
+  border-radius: 25px;         /* Bordes redondeados */
+  outline: none;               /* Quita el borde de enfoque predeterminado */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: box-shadow 0.3s ease; /* Transición suave para la sombra al hacer foco */
+}
+
+/* Añade una sombra más notoria cuando el input está en foco */
+.search-input:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra más grande en foco */
+  border-color: #0056b3;      /* Color de borde azul para resaltar */
+}
+
+/* Estilos del botón de limpiar búsqueda */
+.clear-button {
+  background-color: #0056b3;  /* Color de fondo azul */
+  color: #fff;                /* Texto blanco */
+  font-size: 14px;            /* Tamaño de fuente del texto del botón */
+  padding: 10px 15px;         /* Espaciado interno del botón */
+  border: none;               /* Sin borde */
+  border-radius: 25px;        /* Bordes redondeados */
+  cursor: pointer;            /* Cambia el cursor a "puntero" al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+/* Cambia el color de fondo del botón al pasar el mouse */
+.clear-button:hover {
+  background-color: #003d82;  /* Color de fondo más oscuro para indicar el estado de hover */
+}
+
+/* Contenedor principal de las tarjetas */
 .cards-wrapper {
-  display: flex;
-  flex-direction: column; /* Coloca una card por fila */
-  align-items: center; /* Centra las tarjetas horizontalmente */
-  width: 100%;
-  padding: 20px 0; /* Espaciado superior e inferior */
+  display: flex;               /* Usa flexbox para organizar las tarjetas */
+  flex-direction: column;      /* Coloca una tarjeta por fila */
+  align-items: center;         /* Centra las tarjetas horizontalmente */
+  width: 100%;                 /* Ancho completo */
+  padding: 20px 0;             /* Espaciado superior e inferior */
 }
 
-.container{
-  display: flex;
-  flex-direction: column; /* Coloca una card por fila */
-  align-items: center; /* Centra las tarjetas horizontalmente */
-  width: 100%;
-  padding: 20px 0;
-  background-color: #ededed;
+/* Contenedor general para dar estilo a la página */
+.container {
+  display: flex;               /* Flexbox para alinear los elementos en la página */
+  flex-direction: column;      /* Coloca cada elemento en una fila */
+  align-items: center;         /* Centra los elementos dentro del contenedor */
+  width: 100%;                 /* Ancho completo */
+  padding: 20px;               /* Espaciado interno */
+  background-color: #f5f5f5;   /* Color de fondo gris claro */
 }
 
-.grid{
-    margin-left: 20%;
+/* Ajusta el margen izquierdo del grid para un mejor alineado */
+.grid {
+  margin-left: 20%;            /* Margen a la izquierda del grid para desplazarlo */
+}
+
+/* Estilo simplificado para el encabezado principal */
+.page-title {
+  font-size: 28px;                   /* Tamaño grande para destacar */
+  font-weight: bold;                 /* Negrita para resaltar */
+  color: #d32f2f;                    /* Rojo intenso */
+  font-family: 'Arial', sans-serif;  /* Cambia la fuente */
+  text-align: center;                /* Centra el texto */
+  margin: 20px 0;                    /* Espaciado superior e inferior */
 }
 

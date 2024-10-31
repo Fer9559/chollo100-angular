@@ -46,9 +46,19 @@
 
 .dashboard {
   background-color: #ededed;
-  /*background-image: url('../../../../assets/images/fondo2.webp');
-  background-size: cover;*/         /* Ajusta la imagen para cubrir todo el fondo */
-  /*background-position: center; */    /* Centra la imagen */
-  /*background-repeat: no-repeat;  */  /* Evita que la imagen se repita */
-  /*min-height: 100vh;      */         /* Asegura que el fondo ocupe toda la pantalla */
+  min-height: calc(100vh - 60px); /* Ajusta el 60px a la altura de tu footer */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px; /* Espacio de separación para el footer */
+  box-sizing: border-box;
+}
+
+/* Estilo simplificado para el encabezado principal */
+.page-title {
+  font-size: 28px;                   /* Tamaño grande para destacar */
+  font-weight: bold;                 /* Negrita para resaltar */
+  color: #d32f2f;                    /* Rojo intenso */
+  font-family: 'Arial', sans-serif;  /* Cambia la fuente */
+  text-align: center;                /* Centra el texto */
+  margin: 20px 0;                    /* Espaciado superior e inferior */
 }
