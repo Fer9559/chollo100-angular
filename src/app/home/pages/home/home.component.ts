@@ -47,11 +47,11 @@ export class HomeComponent implements OnInit  {
   }
 
   // Cancelar la suscripción en ngOnDestroy
-  /*ngOnDestroy(): void {
+  ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
-  }*/
+  }
 
   // Método para limpiar la búsqueda y mostrar todos los chollos
   cleanSearch() {
