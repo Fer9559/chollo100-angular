@@ -1,12 +1,13 @@
 <app-header></app-header>
 
-
-<h1 *ngIf="!finishedAuthCheck()">Loading</h1>
-
-<router-outlet *ngIf="finishedAuthCheck()"></router-outlet>
-
+<!-- Contenedor principal que contiene el contenido -->
+<div class="main-content">
+  <h1 *ngIf="!finishedAuthCheck()">Loading</h1>
+  <router-outlet *ngIf="finishedAuthCheck()"></router-outlet>
+</div>
 
 <app-footer></app-footer>
+
 
 
 

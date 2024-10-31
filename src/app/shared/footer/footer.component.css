@@ -29,7 +29,9 @@ body {
   width: 100%;
   text-align: center; /* Alineación de texto */
   z-index: 10; /* Asegura que esté en frente del contenido de la página */
+  height: 60px; /* Asegura que el footer tenga una altura fija */
 }
+
 
 .footer-content {
   display: flex;

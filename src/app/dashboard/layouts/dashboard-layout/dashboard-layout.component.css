@@ -44,12 +44,14 @@
   background-color: #0213bd; /* Color en hover */
 }
 
+/* src/app/dashboard/layouts/dashboard-layout/dashboard-layout.component.css */
+
 .dashboard {
   background-color: #ededed;
   min-height: calc(100vh - 60px); /* Ajusta el 60px a la altura de tu footer */
   display: flex;
   flex-direction: column;
-  padding-bottom: 60px; /* Espacio de separación para el footer */
+  padding-bottom: 60px; /* Espacio para el footer */
   box-sizing: border-box;
 }
 
