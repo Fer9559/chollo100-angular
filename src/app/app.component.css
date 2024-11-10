@@ -13,7 +13,6 @@ html, body {
   min-height: calc(100vh - 60px);
 }
 
-
 app-footer {
   margin-top: auto;
   height: 60px;
