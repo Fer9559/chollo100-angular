@@ -15,20 +15,19 @@ export class DashboardLayoutComponent {
   private authService = inject(AuthService);
   public user = computed(() => this.authService.currentUser());
 
-  chollos: any[] = []; // Array para almacenar los chollos
-  userId: string = ""; // ID del usuario
+  chollos: any[] = [];
+  userId: string = "";
 
   private dashboardService = inject(dashboardService);
   private router = inject(Router);
 
   ngOnInit(): void {
-    this.userId = this.authService.getUserId(); // Obtener ID del usuario autenticado desde el servicio de autenticación
+    this.userId = this.authService.getUserId();
     console.log('ID de usuario logueado: ', this.userId);
-    this.getListUserChollos(this.userId); // Cargar chollos del usuario
+    this.getListUserChollos(this.userId);
 
   }
 
-  // Método para obtener los chollos del usuario
   getListUserChollos(userId: string): void {
     this.dashboardService.getUserChollos(userId).subscribe(
       (data) => {
@@ -45,12 +44,10 @@ export class DashboardLayoutComponent {
     );
   }
 
-  // Redirigir a la página de actualización con el ID del chollo
   onUpdateChollo(id_chollo: string) {
     this.router.navigate(['/dashboard/update', id_chollo]);
   }
 
-  // Método para eliminar un chollo con confirmación
   onDeleteChollo(id_chollo: string) {
     Swal.fire({
       title: '¿Estás seguro?',

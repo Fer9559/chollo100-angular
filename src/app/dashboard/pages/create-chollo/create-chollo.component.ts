@@ -34,15 +34,6 @@ export class CreateCholloComponent {
     // Convertir la cadena de imágenes en un array si las imágenes están separadas por comas
     const { titulo, precio, enlace, descripcion, images } = this.myForm.value;
 
-    //Añadir imágenes al array imagesArray separadas por ","
-    /*const imagesArray: string[] = [];  // Creamos un array vacío para las imágenes
-    const imageStrings = images.split(',');  // Primero dividimos la cadena usando la coma como delimitador
-
-    for (let image of imageStrings) {
-      const trimmedImage = image.trim();  // Quitamos los espacios en blanco
-      imagesArray.push(trimmedImage);  // Añadimos cada imagen al array
-    }*/
-
     //Añadir imágenes a array forma simplificada
     const imagesArray = images.split(',').map((image: string) => image.trim());
 
@@ -53,7 +44,6 @@ export class CreateCholloComponent {
           this.router.navigateByUrl('/dashboard');
         },
         error: (message) => {
-          // Asegúrate de que message sea un string
           Swal.fire('Error', typeof message === 'string' ? message : 'Ha ocurrido un error al crear el chollo.', 'error');
         }
       });

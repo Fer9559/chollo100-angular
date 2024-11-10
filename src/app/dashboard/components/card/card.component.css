@@ -1,188 +1,166 @@
-/* Estilo general de la tarjeta */
+
 .chollo-card {
   display: flex;
-  flex-direction: column; /* Coloca los elementos en columna */
-  width: 100%; /* Establece ancho completo en contenedores flexibles */
-  max-width: 600px; /* Limita el ancho máximo */
-  min-width: 400px; /* Establece un ancho mínimo */
-  margin: 20px auto; /* Centra la card y espaciado vertical */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para darle estilo */
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  min-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   border-radius: 8px;
-  overflow: hidden; /* Evita desbordamientos */
-  background-color: white; /* Fondo blanco */
+  overflow: hidden;
+  background-color: white;
 }
 
-/* Contenedor del contenido de la tarjeta */
 .card-content {
-  display: flex; /* Usa flexbox para la disposición */
+  display: flex;
   padding: 16px;
 }
 
-/* Contenedor de la imagen principal */
 .image-container {
-  position: relative; /* Necesario para que los botones se posicionen correctamente */
-  width: 150px; /* Ancho fijo para la imagen */
-  height: 150px; /* Altura fija para uniformidad */
-  overflow: hidden; /* Evita desbordamientos de la imagen */
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
   border-radius: 8px;
 }
 
-/* Título y precio alineados */
 .card-title-price {
-  display: flex; /* Usamos flexbox para la disposición */
-  justify-content: space-between; /* Distribuye el espacio entre el título y el precio */
-  align-items: center; /* Alinea verticalmente los elementos */
-  width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
-  margin: 10px 0; /* Margen entre el título y el precio */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
   font-size: 18px;
 }
 
-
-/* Estilo para la imagen del chollo */
 .chollo-image {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 100%; /* Ajuste para ocupar la altura del contenedor */
-  object-fit: cover; /* Ajusta la imagen para que llene el contenedor sin distorsión */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Ajuste del contenedor de los detalles de la tarjeta */
 .card-details {
   display: flex;
   flex-direction: column;
   flex: 1;
   margin-left: 16px;
-  justify-content: space-between; /* Espacio entre contenido superior e inferior */
-  min-height: 200px; /* Añade una altura mínima para evitar colapsos */
+  justify-content: space-between;
+  min-height: 200px;
 }
 
-/* Estilos de la descripción */
 .chollo-description {
   margin: 10px 0;
-  flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
-  text-align: justify; /* Justifica el texto */
+  flex-grow: 1;
+  text-align: justify;
 }
 
 .button-group {
   display: flex;
-  justify-content: space-between; /* Distribuye los botones en la fila */
-  align-items: center; /* Centra verticalmente */
-  margin-top: auto; /* Empuja los botones a la parte baja */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
 }
 
-/* Ajustes en los contenedores de los botones */
 .button-container-edit,
 .button-container-delete,
 .button-container {
-  flex: 1; /* Cada contenedor toma el mismo espacio */
+  flex: 1;
 }
 
-/* Contenedor del botón principal, alineado a la derecha y abajo */
 .button-container {
   display: flex;
   justify-content: flex-end;
 
 }
 
-/* Estilos del botón */
 .btn.ir-al-chollo {
-  background-color: #4CAF50; /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 8px 12px; /* Espaciado interno */
-  font-size: 14px; /* Tamaño de fuente */
-  border-radius: 5px; /* Bordes redondeados */
-  text-decoration: none; /* Sin subrayado */
-  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-/* Efecto hover del botón */
 .btn.ir-al-chollo:hover {
-  background-color: #45a049; /* Color en hover */
+  background-color: #45a049;
 }
 
-/* Contenedor del botón de edición, alineado a la izquierda y abajo */
 .button-container-edit {
   display: flex;
   justify-content: flex-start;
 
 }
 
-/* Estilos del botón */
 .btn.editar {
-  background-color: #de7900; /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 8px 12px; /* Espaciado interno */
-  font-size: 14px; /* Tamaño de fuente */
-  border-radius: 5px; /* Bordes redondeados */
-  text-decoration: none; /* Sin subrayado */
-  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+  background-color: #de7900;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-/* Efecto hover del botón */
 .btn.editar:hover {
-  background-color: #bc6600; /* Color en hover */
+  background-color: #bc6600;
 }
 
-/* Contenedor del botón de eliminar, centrado y alineado en la parte baja */
 .button-container-delete {
   display: flex;
   justify-content: center;
 
 }
 
-/* Estilos del botón */
 .btn.btn-danger {
-  background-color: #c60000; /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 8px 12px; /* Espaciado interno */
-  font-size: 14px; /* Tamaño de fuente */
-  border-radius: 5px; /* Bordes redondeados */
-  text-decoration: none; /* Sin subrayado */
-  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+  background-color: #c60000;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-/* Efecto hover del botón */
 .btn.btn-danger:hover {
-  background-color: #b20000; /* Color en hover */
+  background-color: #b20000;
 }
 
-/* Estilo para el botón de navegación dentro de la imagen */
 .nav-button {
-  position: absolute; /* Asegura que el botón se posicione sobre la imagen */
-  top: 50%; /* Centrado verticalmente */
-  transform: translateY(-50%); /* Centra el botón verticalmente */
-  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
-  border: none; /* Sin borde */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  font-size: 18px; /* Tamaño de fuente */
-  padding: 5px; /* Espaciado interno */
-  border-radius: 50%; /* Forma circular */
-  z-index: 10; /* Asegura que esté por encima de la imagen */
-  transition: background-color 0.3s ease; /* Efecto de transición */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.8); /* Color de fondo al pasar el mouse */
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Posicionamiento específico para el botón de siguiente */
 .right {
-  right: 1px; /* Posición a 10px desde el lado derecho */
+  right: 1px;
 }
 
-/* Posicionamiento específico para el botón de anterior */
 .left {
-  left: 1px; /* Posición a 10px desde el lado izquierdo */
+  left: 1px;
 }
 
-/* Deshabilitar el botón cuando no es clickeable */
 .nav-button[disabled] {
-  background-color: rgba(255, 255, 255, 0.3); /* Fondo gris al deshabilitar */
-  cursor: not-allowed; /* Cambia el cursor al pasar sobre el botón deshabilitado */
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
 }
 
-/* Responsividad: en pantallas grandes las tarjetas serán más anchas */
 @media (min-width: 768px) {
   .chollo-card {
-    max-width: 70%; /* El ancho máximo sigue siendo 70% de la pantalla */
+    max-width: 70%;
   }
 }

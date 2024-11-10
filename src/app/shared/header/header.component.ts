@@ -15,13 +15,10 @@ export class HeaderComponent {
   private router = inject(Router);
 
 
-  // Computed property para verificar si el usuario está autenticado
   public isAuthenticated = computed<boolean>(() => {
     return this.authService.authStatus() === AuthStatus.authenticated;
   });
 
-
-  // Método para manejar la navegación según el estado de autenticación
   navigateBasedOnAuthStatus() {
     if (this.isAuthenticated()) {
       this.router.navigateByUrl('/dashboard');
@@ -30,16 +27,12 @@ export class HeaderComponent {
     }
   }
 
-
-  // Método de cierre de sesión
   onLogout() {
-    this.router.navigateByUrl('/home'); // Redirige a /home después de cerrar sesión
+    this.router.navigateByUrl('/home');
     this.authService.logout();
 
   }
 
-
-   // Redirige a la página de inicio
    goToHome() {
     this.router.navigateByUrl('/home');
   }

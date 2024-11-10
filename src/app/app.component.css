@@ -1,25 +1,24 @@
-/* src/app/app.component.css */
 
 html, body {
-  height: 100%; /* Asegúrate de que la altura sea del 100% */
+  height: 100%;
   margin: 0;
   display: flex;
-  flex-direction: column; /* Permite que los hijos se apilen verticalmente */
+  flex-direction: column;
 }
 
 .main-content {
-  flex: 1; /* Permite que el contenedor principal ocupe todo el espacio disponible */
-  display: flex; /* Utiliza flexbox para facilitar la alineación */
-  flex-direction: column; /* Mantiene los elementos en columna */
-  min-height: calc(100vh - 60px); /* Ajusta la altura del contenido principal para que sea igual a la altura de la ventana menos la altura del footer */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 60px);
 }
 
-/* Asegúrate de que el footer tenga un espacio suficiente */
+
 app-footer {
-  margin-top: auto; /* Esto empujará el footer hacia abajo */
-  height: 60px; /* Ajusta esto a la altura real de tu footer */
-  display: flex; /* Permite centrar el contenido dentro del footer */
-  align-items: center; /* Alinea verticalmente el contenido en el centro */
-  justify-content: center; /* Centra el contenido horizontalmente */
+  margin-top: auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 

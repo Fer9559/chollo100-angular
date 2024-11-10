@@ -131,9 +131,5 @@ export class AuthService {
 
     return currentUser.id_user;
   }
-  // Aquí puedes tener métodos para obtener el ID
-  //getUserId(): string {
-  // Lógica para obtener el ID del usuario, puede ser desde el localStorage o un servicio
-  //return 'USER_ID'; // Reemplaza con tu lógica real
-  //}
+
 }

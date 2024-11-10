@@ -18,34 +18,30 @@ export class HomeComponent implements OnInit  {
   private router = inject(Router);
 
   chollos: any[] = [];
-  searchChollos = new FormControl(''); // FormControl para manejar la entrada de búsqueda
+  searchChollos = new FormControl('');
 
   // Subject para controlar la vida de la suscripción
   private destroy$ = new Subject<void>();
 
   ngOnInit(): void {
-    this.getAllChollos(); // Cargar todos los chollos al iniciar
+    this.getAllChollos();
 
      this.searchChollos.valueChanges.pipe(
       filter((titulo): titulo is string => titulo !== null),
       debounceTime(100),
       filter((titulo: string) => titulo.length >= 3),
       switchMap(titulo => {
-        console.log('switchMap ejecutado con título:', titulo); // Log para observar cada emisión en switchMap
         return this.homeService.getCholloByTitle(titulo);
       }),
       takeUntil(this.destroy$) // Se completa cuando el componente se destruye
     ).subscribe({
       next: (chollos) => {
-        console.log('Suscripción ejecutada con resultados:', chollos); // Log para observar cada emisión del observable
         this.chollos = chollos;
       },
       error: (error) => {
-        console.error('Error al buscar el chollo:', error);
       }
     });
 
-    //console.log('Suscripción activa:', this.subscription); // Log para observar el estado de la suscripción
   }
 
   ngOnDestroy(): void {
@@ -53,7 +49,6 @@ export class HomeComponent implements OnInit  {
     this.destroy$.complete(); // Completar el Subject
   }
 
-  // Método para limpiar la búsqueda y mostrar todos los chollos
   cleanSearch() {
     this.searchChollos.setValue('');
     this.getAllChollos();
@@ -73,7 +68,5 @@ export class HomeComponent implements OnInit  {
       }
     });
   }
-
-
 
 }

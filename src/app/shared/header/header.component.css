@@ -1,8 +1,8 @@
 .header {
   display: flex;
-  justify-content: center; /* Centra el contenido del header */
+  justify-content: center;
   align-items: center;
-  padding: 20px 20px; /* Aumenta el padding para dar más altura */
+  padding: 20px 20px;
   background-color: #e14949;
   position: relative;
 }
@@ -10,25 +10,25 @@
 .header-logo-text {
   display: flex;
   align-items: center;
-  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+  cursor: pointer;
 }
 
 .logo {
-  width: 50px; /* Tamaño ajustado del logo */
+  width: 50px;
   height: auto;
   margin-right: 10px;
 }
 
 .header-text {
-  font-size: 26px; /* Aumenta el tamaño de la fuente para mayor visibilidad */
-  font-weight: bold; /* Aplica negrita, resaltando el texto */
-  color: #ffffff; /* Establece el color del texto en blanco para contraste */
-  font-family: 'Times New Roman', serif; /* Usa la fuente 'Times New Roman', con respaldo serif */
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Times New Roman', serif;
 }
 
 .auth-buttons {
   position: absolute;
-  right: 20px; /* Alinea los botones en el extremo derecho */
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;

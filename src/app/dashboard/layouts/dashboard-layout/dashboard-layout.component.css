@@ -1,71 +1,64 @@
-/* Contenedor principal para centrar todas las tarjetas */
+
 .cards-wrapper {
   display: flex;
-  flex-direction: column; /* Coloca una card por fila */
-  align-items: center; /* Centra las tarjetas horizontalmente */
-  width: 100%;
-  padding: 20px 0; /* Espaciado superior e inferior */
-}
-
-.container{
-  display: flex;
-  flex-direction: column; /* Coloca una card por fila */
-  align-items: center; /* Centra las tarjetas horizontalmente */
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: 20px 0;
 }
 
-/* Ajusta el margen izquierdo del grid para un mejor alineado */
-.grid {
+.container{
   display: flex;
-  flex-wrap: wrap; /* Para permitir múltiples columnas si es necesario */
-  justify-content: center; /* Centra el contenido */
-  margin-left: 0; /* Restablece margen izquierdo para centrado global */
-  width: 100%; /* Asegura que el grid ocupe todo el ancho */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
 }
 
-/* Contenedor del botón de edición, alineado a la izquierda y abajo */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 0;
+  width: 100%;
+}
+
 .button-container-create {
   display: flex;
   justify-content: flex-end;
-  margin-top: auto; /* Asegura que se posicione en la parte baja */
-  align-self: flex-end; /* Alinea a la izquierda */
+  margin-top: auto;
+  align-self: flex-end;
   margin-right: 25%;
 }
 
-/* Estilos del botón */
 .btn.crear {
-  background-color: #0015e8; /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 8px 12px; /* Espaciado interno */
-  font-size: 14px; /* Tamaño de fuente */
-  border-radius: 5px; /* Bordes redondeados */
-  text-decoration: none; /* Sin subrayado */
-  transition: background-color 0.3s ease; /* Transición para el efecto hover */
+  background-color: #0015e8;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-/* Efecto hover del botón */
 .btn.crear:hover {
-  background-color: #0213bd; /* Color en hover */
+  background-color: #0213bd;
 }
-
-/* src/app/dashboard/layouts/dashboard-layout/dashboard-layout.component.css */
 
 .dashboard {
   background-color: #ededed;
-  min-height: calc(100vh - 60px); /* Ajusta el 60px a la altura de tu footer */
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
-  padding-bottom: 60px; /* Espacio para el footer */
+  padding-bottom: 60px;
   box-sizing: border-box;
 }
 
-/* Estilo simplificado para el encabezado principal */
 .page-title {
-  font-size: 28px;                   /* Tamaño grande para destacar */
-  font-weight: bold;                 /* Negrita para resaltar */
-  color: #d32f2f;                    /* Rojo intenso */
-  font-family: 'Arial', sans-serif;  /* Cambia la fuente */
-  text-align: center;                /* Centra el texto */
-  margin: 20px 0;                    /* Espaciado superior e inferior */
+  font-size: 28px;
+  font-weight: bold;
+  color: #d32f2f;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 20px 0;
 }

@@ -7,7 +7,7 @@ import { dashboardService } from '../../services/dashboard.service';
 @Component({
   selector: 'app-update-chollo',
   templateUrl: './update-chollo.component.html',
-  styleUrls: ['./update-chollo.component.css'] // Corregido: `styleUrls`
+  styleUrls: ['./update-chollo.component.css']
 })
 export class UpdateCholloComponent implements OnInit {
   private fb = inject(FormBuilder);
@@ -44,8 +44,6 @@ export class UpdateCholloComponent implements OnInit {
       // Verificar que la respuesta sea un array y que tenga al menos un elemento
       if (Array.isArray(response) && response.length > 0) {
         const chollo = response[0]; // Obtener el primer elemento del array
-
-        console.log('Chollo recibido:', chollo); // Agregar log para depurar
 
         // Asegurarse de que chollo e imágenes existan
         if (chollo && chollo.images !== undefined) {
