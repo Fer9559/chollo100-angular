@@ -1,5 +1,5 @@
 
 
 export const enviroment = {
-  baseUrl: 'http://localhost:3000/api'
+  baseUrl: 'https://cholloa100-backend-production.up.railway.app/api'
 }
