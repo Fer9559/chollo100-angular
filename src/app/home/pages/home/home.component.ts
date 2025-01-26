@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit  {
   chollos: any[] = [];
   searchChollos = new FormControl('');
 
-  // Subject para controlar la vida de la suscripción
+
   private destroy$ = new Subject<void>();
 
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit  {
       switchMap(titulo => {
         return this.homeService.getCholloByTitle(titulo);
       }),
-      takeUntil(this.destroy$) // Se completa cuando el componente se destruye
+      takeUntil(this.destroy$)
     ).subscribe({
       next: (chollos) => {
         this.chollos = chollos;
@@ -45,8 +45,8 @@ export class HomeComponent implements OnInit  {
   }
 
   ngOnDestroy(): void {
-    this.destroy$.next(); // Emitir valor para completar las suscripciones
-    this.destroy$.complete(); // Completar el Subject
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   cleanSearch() {

@@ -159,8 +159,3 @@
   cursor: not-allowed;
 }
 
-@media (min-width: 768px) {
-  .chollo-card {
-    max-width: 70%;
-  }
-}

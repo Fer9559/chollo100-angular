@@ -6,6 +6,7 @@
 >
   <span class="login100-form-title p-b-49"> Registro </span>
 
+
   <div class="wrap-input100 m-b-23">
     <span class="label-input100">Correo</span>
     <input
@@ -15,7 +16,11 @@
       placeholder="Correo electrónico"
     />
     <span class="focus-input100"></span>
+    <div *ngIf="isFieldInvalid('email')" class="error-message">
+      {{ getErrorMessage('email') }}
+    </div>
   </div>
+
 
   <div class="wrap-input100">
     <span class="label-input100">Contraseña</span>
@@ -26,7 +31,11 @@
       placeholder="Ingrese su contraseña"
     />
     <span class="focus-input100"></span>
+    <div *ngIf="isFieldInvalid('password')" class="error-message">
+      {{ getErrorMessage('password') }}
+    </div>
   </div>
+
 
   <div class="wrap-input100">
     <span class="label-input100">Nombre de Usuario</span>
@@ -37,6 +46,9 @@
       placeholder="Ingrese su nombre de Usuario"
     />
     <span class="focus-input100"></span>
+    <div *ngIf="isFieldInvalid('fullName')" class="error-message">
+      {{ getErrorMessage('fullName') }}
+    </div>
   </div>
 
   <div class="text-right p-t-8 p-b-31"></div>
@@ -53,6 +65,4 @@
       </button>
     </div>
   </div>
-
-
 </form>

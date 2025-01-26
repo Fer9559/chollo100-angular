@@ -20,7 +20,7 @@ export class CardComponent implements OnInit {
     if (!this.chollo) throw new Error('Chollo property is required.');
 
     if (this.chollo.images && Array.isArray(this.chollo.images)) {
-      this.images = this.chollo.images; // Asignación directa si es un array
+      this.images = this.chollo.images;
     }
 }
 
